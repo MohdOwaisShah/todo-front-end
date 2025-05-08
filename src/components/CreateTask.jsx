@@ -13,7 +13,7 @@ const CreateTask = ({ onTaskAdded }) => {
         if (task !== "") {
             const trimTask = task.trim()
             
-            axios.post('http://localhost:3000/add', { data: trimTask })
+            axios.post(`${process.env.REACT_APP_API_URL}/add`, { data: trimTask })
                 .then((result) => {
                     // backend data
                     console.log(result)

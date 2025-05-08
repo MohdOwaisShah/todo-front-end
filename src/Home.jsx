@@ -24,7 +24,7 @@ const Home = () => {
 
     // handleDelete
     const handleDelete = (id) => {
-        axios.delete("http://localhost:3000/delete" + id)
+        axios.delete(`${process.env.REACT_APP_API_URL}/delete` + id)
             .then(result => console.log(result))
             .catch(error => console.log(error))
     }
