@@ -13,7 +13,7 @@ const Home = () => {
     const [todolists, setTodolists] = useState([])
 
     const fetchTodoFromDB = () => {
-        axios.get("http://localhost:3000/get")
+        axios.get(`${process.env.REACT_APP_API_URL}/get`)
             .then(result => setTodolists(result.data))
             .catch(err => console.log(err))
     }
